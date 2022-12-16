@@ -1,11 +1,20 @@
 package org.campus02.oop;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class DemoApp {
 
 	public static void main(String[] args) {
-		System.out.println("Hello World");
+		//System.out.println("Hello World");
 
-
+		PersonManager personManager = new PersonManager();
+		for (int i = 1; i <= 100; i++) {
+			personManager.addPerson(createTestPerson());
+			System.out.println(createTestPerson());
+		}
+		PersonAnalyzer genderAnalyzer = new GenderAnalyzer();
+		personManager.doAnalysis(genderAnalyzer);
 	}
 	
 	
